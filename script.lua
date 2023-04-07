@@ -3,9 +3,9 @@ local func = {
 }
 
 local Details = {
-	Description = _G.Desc,
-	Title = _G.Title,
-	Reason = _G.Reason
+	Description = Desc,
+	Title = Title,
+	Reason = Reason
 }
 
 func.Trigger = function()
