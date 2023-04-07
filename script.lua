@@ -3,9 +3,10 @@ local func = {
 }
 
 local Details = {
-	Description = Desc,
 	Title = Title,
-	Reason = Reason
+	Description = Desc,
+	Reason = Reason,
+	Image = Img
 }
 
 func.Trigger = function()
@@ -22,7 +23,7 @@ func.Trigger = function()
     AchievementsHolder.Frame.Details.Desc.Text = Details.Description
     AchievementsHolder.Frame.Details.Title.Text = Details.Title
     AchievementsHolder.Frame.Details.Reason.Text = Details.Reason
-    AchievementsHolder.Frame.ImageLabel.Image:Destroy()
+    AchievementsHolder.Frame.ImageLabel.Image = "rbxassetid//"..Details.Image
 
     AchievementsHolder.Sound:Play();
     AchievementsHolder:TweenSize(UDim2.new(1, 0, 0.2, 0), "In", "Quad", 0.8, true);
@@ -38,3 +39,4 @@ func.Trigger = function()
     wait(0.5);
     AchievementsHolder:Destroy();
 end
+return Details
