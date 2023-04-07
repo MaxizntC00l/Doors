@@ -1,14 +1,18 @@
-local function Trigger(Title,Desc,Reason)
-    local Details = {
-        Description = Desc,
-        Title = Title,
-        Reason =  Reason
-    }
+local func = {
+	Trigger = function() end
+}
+
+local Details = {
+	Description = _G.Desc,
+	Title = _G.Title,
+	Reason = _G.Reason
+}
+
+func.Trigger = function()
     local LocalPlayer = game.Players.LocalPlayer;
     local GUI = LocalPlayer.PlayerGui.MainUI
     local TweenService = game:GetService("TweenService");
     local AchievementsHolder = GUI.AchievementsHolder.Achievement:Clone();
-
 
     AchievementsHolder.Size = UDim2.new(0, 0, 0, 0);
     AchievementsHolder.Frame.Position = UDim2.new(1.1, 0, 0, 0);
